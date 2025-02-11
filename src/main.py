@@ -48,7 +48,8 @@ response = client.models.generate_content(
 	config = types.GenerateContentConfig(
 		system_instruction = [
 			"You are an expert at industrial systems",
-			"Your task is to observe a video and provide a structured output for each activity that is performed - activity, start_timestamp_ms and end_timestamp_ms"
+			"Your task is to observe a video and provide a structured output for each activity that is performed."
+			"activity : The activity performed ONE WORD , start_timestamp_ms : Start timestamp of the activity in milliseconds and end_timestamp_ms : End timestamp of the activity in milliseconds"
 		],
 		response_schema = output_schema,
 		response_mime_type = "application/json"
